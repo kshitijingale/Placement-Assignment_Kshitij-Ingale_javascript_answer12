@@ -47,17 +47,27 @@ function createBlog() {
 // Show all Blogs on DOM
 async function showBlogs() {
     await addData();
-    blogs.forEach((blog) => {
+    blogs.forEach((blog, index) => {
         const post = document.createElement('div')
         post.setAttribute("class", "post");
+        post.setAttribute("id", index)
         post.innerHTML = `
         <h2>${blog.title}</h2>
         <p>
           ${blog.content}
         </p>
+        <button onclick="deletePost(${index})">Delete</button>
         `
         postsContainer.appendChild(post);
     })
+}
+
+// Delete blog
+function deletePost(index) {
+    console.log(index);
+    blogs.splice(index, 1);
+    postsContainer.innerHTML = "";
+    showBlogs();
 }
 
 showBlogs();
