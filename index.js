@@ -28,7 +28,7 @@ function createBlog() {
     const title = document.getElementById('blog-title');
     const body = document.getElementById('blog-body');
 
-    if (title === "" || body === "") {
+    if (title.value === "" || body.value === "") {
         alert("Fields cannot be empty");
         return;
     }
