@@ -5,9 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Blog Posts</title>
   </head>
   <body>
+    <h1>My Blog</h1>
+    <div class="create-blog-container">
+      <input
+        placeholder="Enter the blog title"
+        type="text"
+        name="title"
+        id="blog-title"
+      />
+      <textarea
+        placeholder="Enter content"
+        id="blog-body"
+        rows="4"
+        cols="40"
+      ></textarea>
+      <button type="submit" onclick="createBlog()">Create Blog</button>
+    </div>
+
+    <div class="posts-container" id="posts-container">
+      <!-- Sample post -->
+      <!-- <div class="post">
+        <h2>title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+          debitis voluptatum quam ab odio recusandae eligendi facere delectus
+          iusto nihil.
+        </p>
+      </div> -->
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
